@@ -1,8 +1,6 @@
 import java.util.Scanner;
 
 public class CurrentTest {
-    static int money;
-    static int[] result;
     public static void main(String[] args) {
         int curr50000 = 50000;
         int curr10000 = 10000;
