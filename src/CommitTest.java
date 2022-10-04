@@ -12,7 +12,7 @@ public class CommitTest {
 
     }
 
-    
+
     public static void scan(){
         Scanner sc = new Scanner(System.in);
         money = sc.nextInt();
