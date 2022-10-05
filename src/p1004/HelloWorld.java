@@ -1,3 +1,5 @@
+package p1005;
+
 import java.util.Scanner;
 
 public class HelloWorld {
