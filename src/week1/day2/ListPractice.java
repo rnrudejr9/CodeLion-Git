@@ -8,7 +8,7 @@ public class ListPractice {
 
     public ListPractice() {
         students = new ArrayList<>();
-        GenerateName g = new GenerateName();
+        NameGenerator g = new NameGenerator();
         for(int i = 0; i<99;i++) {
             this.students.add(g.generateName());
         }

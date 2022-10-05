@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class GenerateName {
+public class NameGenerator {
 
     String first_name;
     String second_name;
@@ -327,7 +327,7 @@ public class GenerateName {
                     "울",
                     "련");
 
-    public GenerateName() {
+    public NameGenerator() {
 
     }
 

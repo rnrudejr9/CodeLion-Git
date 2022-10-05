@@ -8,8 +8,11 @@ public class ListPracticeMain {
         ListPractice list = new ListPractice();
         List<String> students = list.getStudentList();
 
+
         for(String student: students){
             System.out.println(student);
         }
+
+
     }
 }
