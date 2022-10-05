@@ -1,8 +1,7 @@
 # CodeLion-git-test
 ---
 * 멋쟁이사자처럼 백엔드 스쿨 2기
-  * 예시
-  * 예시
+ 
 ---
 * 마크다운 사용법
 https://gist.github.com/ihoneymon/652be052a0727ad59601
