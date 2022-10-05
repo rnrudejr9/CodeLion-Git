@@ -7,15 +7,5 @@ public class CalculatorMain {
 
         Calculator c2 = new Calculator(20, 10, new RandomNumberGenerator());
         c2.plus();
-////        c.plus();
-////        c.minus();
-////        c.multiple();
-////        c.divide();
-//
-//        int a = 15;
-//        c.plus(a);
-//        c.minus(a);
-//        c.multiple(a);
-//        c.divide(a);
     }
 }
