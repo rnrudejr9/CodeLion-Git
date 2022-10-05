@@ -1,11 +1,12 @@
 package CalcTest;
 
 public class Calculator {
+    NumberGenerator numberGenerator;
     int a;
     int b;
-    public Calculator(int a, int b) {
+    public Calculator(int a, int b,NumberGenerator numberGenerator) {
         this.a = a;
-        this.b = b;
+        this.b = numberGenerator.generate(b);
     }
     public void plus(){
         System.out.println(a+b);
@@ -20,4 +21,7 @@ public class Calculator {
         double div = a/b;
         System.out.println(div);
     }
+
+
+
 }

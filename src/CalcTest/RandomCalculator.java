@@ -5,9 +5,6 @@ public class RandomCalculator {
         //a + random number
         int b;
 
-    public RandomCalculator(RandomNumberCreate randomNumberCreate) {
-        int b = randomNumberCreate.create();
-    }
 
 
         public void plus(int a){
