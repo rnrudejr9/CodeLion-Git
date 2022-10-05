@@ -1,4 +1,4 @@
-package p1005;
+package p1004;
 
 import java.util.Scanner;
 

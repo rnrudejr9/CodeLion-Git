@@ -1,6 +1,4 @@
-package p1005;
-
-import java.util.Scanner;
+package p1004;
 
 public class CurrentTest {
     public static void main(String[] args) {

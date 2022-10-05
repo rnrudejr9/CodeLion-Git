@@ -1,9 +1,11 @@
-package p1005;
+package p1004;
 
 import java.util.Scanner;
 
 public class HelloWorld {
-
+    public static int mel(){
+        return 100_000_000;
+    }
     /*
     문제 설명
     용준이와 봉찬이는 공기 놀이로 내기를 하였다.
@@ -15,6 +17,7 @@ public class HelloWorld {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         System.out.println(calc(n));
+        System.out.println(mel());
     }
     public static String calc(int n){
 
