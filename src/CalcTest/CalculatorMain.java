@@ -7,5 +7,8 @@ public class CalculatorMain {
 
         Calculator c2 = new Calculator(20, 10, new RandomNumberGenerator());
         c2.plus();
+
+        Calculator c3 = new Calculator(20,10, new ByPassGenerator());
+        c3.plus();
     }
 }
