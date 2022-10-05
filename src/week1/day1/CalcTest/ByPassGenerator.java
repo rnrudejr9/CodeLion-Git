@@ -1,4 +1,4 @@
-package CalcTest;
+package week1.day1.CalcTest;
 
 public class ByPassGenerator implements NumberGenerator{
     @Override
