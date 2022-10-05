@@ -7,7 +7,8 @@ public class CalculatorMain {
 //        c.minus();
 //        c.multiple();
 //        c.divide();
-        RandomCalculator c = new RandomCalculator();
+        RandomCalculator c = new RandomCalculator(new RandomNumberCreate());
+
         int a = 15;
         c.plus(a);
         c.minus(a);
