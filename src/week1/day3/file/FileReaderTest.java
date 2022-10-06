@@ -1,11 +1,9 @@
 package week1.day3.file;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 
 class ReadFile{
@@ -15,7 +13,7 @@ class ReadFile{
     }
     public void read(String filename){
         try(BufferedReader br = Files.newBufferedReader(
-                Paths.get("a_file.txt"), StandardCharsets.UTF_8)) {
+                Paths.get(filename), StandardCharsets.UTF_8)) {
             String line;
             while((line = br.readLine()) != null){
                 System.out.println(line);
@@ -25,25 +23,36 @@ class ReadFile{
         }
     }
     void createANewFile() throws IOException {
-        File file = new File("./numbers.txt");
+        File file = new File(filename);
         file.createNewFile();
         System.out.println("파일 생성 되었는지?:" + file.exists());
     }
 
-    public void readByte(String filename) throws IOException {
-        BufferedReader br = new BufferedReader(new FileReader("./numbers.txt"),16*1024);
+    boolean fileExist(){
+        boolean r = Files.exists(Paths.get(filename));
+        return r;
+    }
 
-        for(int i = 0; i<5;i++){
+    public void readByte(String filename,int size) throws IOException {
+        BufferedReader br = new BufferedReader(new FileReader(filename),16*1024);
+        for(int i = 0; i<size;i++){
             System.out.println((char)br.read());
         }
-
     }
+
+
 }
 
 public class FileReaderTest {
     public static void main(String[] args) throws IOException {
         ReadFile readFile = new ReadFile("a_file");
-        readFile.createANewFile();
-        readFile.readByte("a_file");
+        if(readFile.fileExist()){
+            readFile.readByte("a_file",10);
+        }else{
+            System.out.println("파일이 없습니다.");
+            readFile.createANewFile();
+        }
+
+
     }
 }
