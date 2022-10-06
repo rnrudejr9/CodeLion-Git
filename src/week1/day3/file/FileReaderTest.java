@@ -11,17 +11,6 @@ class ReadFile{
     public ReadFile(String filename){
         this.filename = filename;
     }
-    public void read(String filename){
-        try(BufferedReader br = Files.newBufferedReader(
-                Paths.get(filename), StandardCharsets.UTF_8)) {
-            String line;
-            while((line = br.readLine()) != null){
-                System.out.println(line);
-            }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
     void createANewFile() throws IOException {
         File file = new File(filename);
         file.createNewFile();
@@ -33,12 +22,32 @@ class ReadFile{
         return r;
     }
 
+    public void read(String filename){
+        try(BufferedReader br = Files.newBufferedReader(
+                Paths.get(filename), StandardCharsets.UTF_8)) {
+            String line;
+            while((line = br.readLine()) != null){
+                System.out.println(line);
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }//전체 읽기
+    public void readLineByOne(String filename){
+        try(BufferedReader br = Files.newBufferedReader(Paths.get(filename),StandardCharsets.UTF_8)){
+            System.out.println(br.readLine());
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+    //한 문장씩 읽기
     public void readByte(String filename,int size) throws IOException {
         BufferedReader br = new BufferedReader(new FileReader(filename),16*1024);
         for(int i = 0; i<size;i++){
             System.out.println((char)br.read());
         }
     }
+    // 한단어씩 읽기
 
     public String read2Chars(String filename) throws IOException{
         FileReader fileReader = new FileReader(filename);
@@ -47,18 +56,22 @@ class ReadFile{
         str += (char) fileReader.read();
         return str;
     }
-
+    // 두단어 읽기
 
 }
 
 public class FileReaderTest {
     public static void main(String[] args) throws IOException {
         ReadFile readFile = new ReadFile("a_file");
-
-        System.out.println(readFile.read2Chars("a_file"));
-
         if(readFile.fileExist()){
-          //  readFile.readByte("a_file",10);
+           readFile.read("a_file");
+           readFile.readLineByOne("a_file");
+    /* 실행결과
+    한글자씩읽을
+    수있을까
+    한글자씩읽을
+     */
+
         }else{
             System.out.println("파일이 없습니다.");
             readFile.createANewFile();
