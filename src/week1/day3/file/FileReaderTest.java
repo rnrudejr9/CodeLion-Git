@@ -46,6 +46,7 @@ class ReadFile{
 public class FileReaderTest {
     public static void main(String[] args) throws IOException {
         ReadFile readFile = new ReadFile("a_file");
+
         if(readFile.fileExist()){
             readFile.readByte("a_file",10);
         }else{
