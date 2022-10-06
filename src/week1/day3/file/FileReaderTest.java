@@ -40,6 +40,14 @@ class ReadFile{
         }
     }
 
+    public String read2Chars(String filename) throws IOException{
+        FileReader fileReader = new FileReader(filename);
+        String str = "";
+        str += (char) fileReader.read();
+        str += (char) fileReader.read();
+        return str;
+    }
+
 
 }
 
@@ -47,19 +55,19 @@ public class FileReaderTest {
     public static void main(String[] args) throws IOException {
         ReadFile readFile = new ReadFile("a_file");
 
+        System.out.println(readFile.read2Chars("a_file"));
+
         if(readFile.fileExist()){
-            readFile.readByte("a_file",10);
+          //  readFile.readByte("a_file",10);
         }else{
             System.out.println("파일이 없습니다.");
             readFile.createANewFile();
         }
 
-        File dir = new File("./");
-        File files[] = dir.listFiles();
-        for(File file : files){
-            System.out.println(file);
-        }
-
-
+//        File dir = new File("./");
+//        File files[] = dir.listFiles();
+//        for(File file : files){
+//            System.out.println(file);
+//        }
     }
 }
