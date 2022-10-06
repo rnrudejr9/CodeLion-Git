@@ -21,6 +21,7 @@ public class MapPractice2 {
                 if (c >= 65 && c <= 90) {
                     c += 97 - 65;
                 }
+                //대문자 -> 소문자로 통합
                 if (alphabetCnt.get(c) == null) {
                     alphabetCnt.put(c, 1);
                 } else {
