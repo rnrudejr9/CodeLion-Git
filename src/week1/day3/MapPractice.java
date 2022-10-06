@@ -10,7 +10,7 @@ public class MapPractice {
     public static void main(String[] args) {
         HashMap<Integer, String> map = new HashMap<>();
         NameGenerator gen = new NameGenerator();
-        
+
         for(int i = 0 ;i<50;i++){
             map.put(i,gen.generateName());
         }
