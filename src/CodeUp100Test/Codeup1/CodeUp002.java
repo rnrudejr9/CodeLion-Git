@@ -1,4 +1,4 @@
-package CodeUp100Test;
+package CodeUp100Test.Codeup1;
 
 public class CodeUp002 {
     public static void main(String[] args){
