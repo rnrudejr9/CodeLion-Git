@@ -30,7 +30,7 @@ class ReadFile{
                 System.out.println(line);
             }
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }//전체 읽기
     public void readLineByOne(String filename){
@@ -81,6 +81,6 @@ public class FileReaderTest {
 //        File files[] = dir.listFiles();
 //        for(File file : files){
 //            System.out.println(file);
-//        }
+//        } 디렉토리 예제
     }
 }
