@@ -25,8 +25,8 @@ public class PopulationMove {
 
     public static PopulationMove Parse(String data){
         String[] splitdata = data.split(",");
-        int data1 = Integer.parseInt(splitdata[0]);
-        int data2 = Integer.parseInt(splitdata[6]);
+        int data1 = Integer.parseInt(splitdata[6]); //전출
+        int data2 = Integer.parseInt(splitdata[0]); //전입
         return new PopulationMove(data1,data2);
     }
 }
