@@ -1,0 +1,17 @@
+key:11,41 value:1430
+key:11,30 value:118
+key:11,43 value:92
+key:11,31 value:65
+key:11,42 value:135
+key:11,45 value:116
+key:11,11 value:6824
+key:11,44 value:134
+key:11,47 value:116
+key:11,36 value:57
+key:11,46 value:87
+key:11,50 value:66
+key:11,27 value:131
+key:11,48 value:144
+key:11,26 value:181
+key:11,29 value:87
+key:11,28 value:217
