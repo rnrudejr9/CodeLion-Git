@@ -8,18 +8,9 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-interface DoSomething<T>{
-    List<T> work(String str);
-}
-class SoutDoSomething implements DoSomething<PopulationMove>{
-    @Override
-    public List<PopulationMove> work(String str) {
-        return null;
-    }
-}
 
-public class ReadLineContext<T> {
-    private DoSomething<T> doSomething;
+
+public class ReadLineContext_useT<T> {
     public List<T> readByData(String adress){
 
         List<T> result = new ArrayList<>();
@@ -28,7 +19,7 @@ public class ReadLineContext<T> {
         )) {
             String str;
             while((str = br.readLine()) != null){
-                PopulationMove pm = PopulationMove.Parse(str);
+                PopulationMove_useT pm = PopulationMove_useT.Parse(str);
                 result.add((T) pm);
             }
         } catch (IOException e ){
@@ -38,9 +29,9 @@ public class ReadLineContext<T> {
     }
 
     public static void main(String[] args) {
-        ReadLineContext<PopulationMove> readlineconext = new ReadLineContext<>();
-        List<PopulationMove> result = readlineconext.readByData("C:\\Users\\\\KOO\\\\Downloads\\\\2021_인구관련연간자료_20220927_66125.csv");
-        for(PopulationMove p : result){
+        ReadLineContext_useT<PopulationMove_useT> readlineconext = new ReadLineContext_useT<>();
+        List<PopulationMove_useT> result = readlineconext.readByData("C:\\Users\\\\KOO\\\\Downloads\\\\2021_인구관련연간자료_20220927_66125.csv");
+        for(PopulationMove_useT p : result){
             System.out.println(p.getFromSido());
             System.out.println(p.getToSido());
         }
