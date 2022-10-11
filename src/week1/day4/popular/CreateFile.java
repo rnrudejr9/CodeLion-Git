@@ -1,9 +1,7 @@
 package week1.day4.popular;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.nio.file.Files;
 import java.util.List;
 
 public class CreateFile {
@@ -16,9 +14,9 @@ public class CreateFile {
         }
     }
     //List<String>을 지정한 파일(filename)에 write
-    public void write(List<String> strs, String filename) {
+    public void write(List<String> strs, String filename) throws IOException {
         File file = new File(filename);
-
+        BufferedReader br = Files.newBufferedReader(new File("pathname").toPath());
         try{
             BufferedWriter writer = new BufferedWriter(new FileWriter(file));
             for(String str:strs) {
@@ -29,6 +27,7 @@ public class CreateFile {
             e.printStackTrace();
         }
     }
+
     public String fromToString(PopulationMove populationMove){
         return populationMove.getFromSido()+","+populationMove.getToSido()+"\n";
     }
