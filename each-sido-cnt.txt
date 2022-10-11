@@ -1,7 +1,0 @@
-key:서울특별시,null value:2642
-key:서울특별시,전라남도 value:57
-key:서울특별시,서울특별시 value:6824
-key:서울특별시,경기도 value:65
-key:서울특별시,어디여 value:144
-key:서울특별시,울산광역시 value:181
-key:서울특별시,세종특별자치시 value:87
