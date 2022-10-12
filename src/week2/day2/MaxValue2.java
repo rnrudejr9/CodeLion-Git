@@ -3,6 +3,15 @@ package week2.day2;
 import java.util.Scanner;
 
 public class MaxValue2 {
+    public int getMax(int[] arr){
+        int maxValue = arr[0];
+        for(int i = 1;i<arr.length;i++){
+            if(arr[i] > maxValue){
+                maxValue = arr[i];
+            }
+        }
+        return maxValue;
+    }
     public static void main(String[] args) {
         Scanner sc= new Scanner(System.in);
 
