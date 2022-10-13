@@ -1,15 +1,15 @@
 package week2.day3.sort;
 
-public class SelectionSort {
+public class BubbleSort2 {
     public static void main(String[] args) {
         int[] arr = new int[]{2,3,6,4,7,1};
         //오름차순 또는 내림차순으로 정렬하는 알고리즘
-        SelectionSort(arr);
-        for(int i : arr){
+        BubbleSort2 bs = new BubbleSort2();
+        for(int i : bs.BubbleSort2(arr)){
             System.out.println(i);
         }
     }
-    public static int[] SelectionSort(int[] arr){
+    public int[] BubbleSort2(int[] arr){
         for(int i = 0 ; i<arr.length;i++){
             for(int j = i; j<arr.length;j++){
                 if(arr[i]>arr[j]){
