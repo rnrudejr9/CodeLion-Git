@@ -24,9 +24,9 @@ public class InsertionSort2 {
 
     public static void main(String[] args) {
         int[] arr = {8,5,6,2,4};
-        InsertionSort2 insertionSort01 = new InsertionSort2();
+        InsertionSort2 insertionSort = new InsertionSort2();
         arr = new int[]{5,8,6,2,4};
-        int[] result = insertionSort01.sort(arr,2);
+        int[] result = insertionSort.sort(arr,1);
 
         System.out.println(Arrays.toString(result));
 
