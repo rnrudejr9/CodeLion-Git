@@ -10,6 +10,10 @@ class SquarePrinter {
         }
     }
 
+    public void print(int m){
+        String s = "*";
+        s.repeat(3);
+    }
     public void rectanglePrintStar(int n, int m){
         for(int i =0;i<n;i++){
             for(int j=0 ; j<m; j++){
@@ -17,6 +21,15 @@ class SquarePrinter {
             }
             System.out.println();
         }
+    }
+
+    public void recursionPrint(int height,int size){
+        if(height==0){
+            System.out.println();
+            size--;
+        }
+        System.out.print("*");
+        recursionPrint(height--,size);
     }
 }
 
@@ -26,5 +39,7 @@ public class StarPrint {
         sp.squarePrintStar(5);
         System.out.println();
         sp.rectanglePrintStar(3,5);
+        System.out.println();
+        sp.rectanglePrintStar(7,5);
     }
 }
