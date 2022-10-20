@@ -3,7 +3,7 @@
 * 멋쟁이사자처럼 백엔드 스쿨 2기
 
 > 토이프로젝트
-* LineParser https://github.com/rnrudejr9/LineParser 
+* LineParser https://github.com/rnrudejr9/Parser
  
 ---
 * 마크다운 사용법
