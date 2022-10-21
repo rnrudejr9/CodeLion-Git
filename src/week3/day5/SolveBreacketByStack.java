@@ -17,8 +17,6 @@ public class SolveBreacketByStack {
             }catch (Exception e){
                 return false;
             }
-
-
         }
 
         if(st.isEmpty()){
