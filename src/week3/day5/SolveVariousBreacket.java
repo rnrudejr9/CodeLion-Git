@@ -37,12 +37,20 @@ public class SolveVariousBreacket {
     public static void main(String[] args) {
         String s1 = "[{()}]";
         System.out.println(solve(s1));
+        //true
         String s2 = "[[[{{}}()()]]]";
         System.out.println(solve(s2));
+        //true
         String s3 = "{()}{()})";
         System.out.println(solve(s3));
+        //false
         String s4 = "[([()])]";
         System.out.println(solve(s4));
+        //true
+        String s5 = "}}}}}";
+        System.out.println(solve(s5));
+        String s6 = "()([){}";
+        System.out.println(solve(s6));
 
     }
 }
