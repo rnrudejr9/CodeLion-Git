@@ -24,9 +24,10 @@ public class SolveVariousBreacket {
                     }
                 }
             }
-        }catch (EmptyStackException | StackOverflowError e2){
+        }catch (EmptyStackException e){
             return false;
         }
+
         if(st.isEmpty()){
             return true;
         }else{
@@ -51,6 +52,9 @@ public class SolveVariousBreacket {
         System.out.println(solve(s5));
         String s6 = "()([){}";
         System.out.println(solve(s6));
+        String s7 = "[()(){}]";
+        System.out.println(solve(s7));
+
 
     }
 }

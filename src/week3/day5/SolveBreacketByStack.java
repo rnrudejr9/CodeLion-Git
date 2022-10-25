@@ -1,6 +1,7 @@
 package week3.day5;
 
 import java.util.Arrays;
+import java.util.EmptyStackException;
 import java.util.Stack;
 
 public class SolveBreacketByStack {
@@ -14,7 +15,7 @@ public class SolveBreacketByStack {
                 if (s.charAt(i) == ')') {
                     st.pop();
                 }
-            }catch (Exception e){
+            }catch (EmptyStackException e){
                 return false;
             }
         }
