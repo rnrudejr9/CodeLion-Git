@@ -21,32 +21,22 @@ class Solution {
         String answer = "";
         HashMap<String, Integer> map = new HashMap<>();
         for(int i =0;i<participant.length;i++){
-            if(!map.containsKey(participant[i])) {
-                map.put(participant[i], 1);
-            }else{
+            if(map.containsKey(participant[i])){
                 map.put(participant[i],map.get(participant[i]) + 1);
+            }else {
+                map.put(participant[i], 1);
             }
-        }
-        for(int i =0;i< map.size();i++){
-            System.out.println("ke" + participant[i]);
-            System.out.println("val " + map.get(participant[i]));
-        }
-        System.out.println("-------------------");
-        for(int i = 0; i<completion.length;i++){
 
+        }
+
+        for(int i = 0; i<completion.length;i++){
             if(map.get(completion[i]) != 0){
                 map.put(completion[i],map.get(completion[i]) - 1);
             }
         }
 
-
-        for(int i =0;i< map.size();i++){
-            System.out.println("ke" + participant[i]);
-            System.out.println("val " + map.get(participant[i]));
-        }
-
         for(String s : map.keySet()){
-            if(map.containsKey(s)){
+            if(map.get(s) != 0){
                 answer = s;
             }
         }
