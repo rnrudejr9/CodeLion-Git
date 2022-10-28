@@ -23,18 +23,13 @@ class Solution2 {
             set.add(s);
         }
         int cnt = 0;
-        for (String s : set) {
-            for (int i = 0; i < phone_book.length; i++) {
-                if (s.indexOf(phone_book[i]) != -1) {
-                    cnt++;
+        for (String num: phone_book){
+            for (int i = 1; i < num.length(); i++) {
+                if (set.contains(num.substring(0, i))){
+                    answer = false;
                 }
             }
         }
-
-        System.out.println();
-        if(cnt > 0){
-            return answer = false;
-        }
-        return answer = true;
+        return answer;
     }
 }
