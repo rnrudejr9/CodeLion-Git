@@ -10,7 +10,7 @@ import java.util.*;
 public class p_프로그래머스_모의고사 {
     public static void main(String[] args) {
         Solution s = new Solution();
-        int[] a = {1,3,2,4,5};
+        int[] a = {1,2,3,4,5};
         s.solution(a);
     }
 }
@@ -18,7 +18,7 @@ public class p_프로그래머스_모의고사 {
 
 class Solution {
     public int[] solution(int[] answers) {
-        int[] answer = new int[3];
+        int[] answer={};
         int[] a = new int[10001];
         int[] b = new int[10001];
         int[] c = new int[10001];
@@ -30,19 +30,49 @@ class Solution {
             b[i] = std[i%8];
             c[i] = std2[i%10];
         }
-        int acnt= 0;
-        int bcnt = 0;
-        int ccnt = 0;
+        HashMap<Integer, Integer> map = new HashMap<>();
+
         for(int i = 0 ; i<answers.length;i++){
             if(a[i] == answers[i]){
-                acnt += 1;
+                if(!map.containsKey(1)){
+                    map.put(1,1);
+                }else {
+                    map.put(1, map.get(1) + 1);
+                }
             }
             if(b[i] == answers[i]){
-                bcnt += 1;
+                if(!map.containsKey(2)){
+                    map.put(2,1);
+                }else {
+                    map.put(2, map.get(2) + 1);
+                }
             }
             if(c[i] == answers[i]){
-                ccnt += 1;
+                if(!map.containsKey(3)){
+                    map.put(3,1);
+                }else {
+                    map.put(3, map.get(3) + 1);
+                }
             }
+
+        }
+
+        StringBuilder sb = new StringBuilder();
+
+        Integer Max = Collections.max(map.values());
+        for(int i = 0;i<map.size();i++){
+            int temp = map.get(i+1);
+            if(Max == temp){
+                sb.append(i+1);
+            }
+        }
+
+
+
+        String temp[] = sb.toString().split("");
+        answer = new int[temp.length];
+        for(int i =0 ;i<temp.length;i++){
+            answer[i] = Integer.parseInt(temp[i]);
         }
 
         return answer;
