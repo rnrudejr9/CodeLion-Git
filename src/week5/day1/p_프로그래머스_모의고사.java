@@ -4,6 +4,7 @@ package week5.day1;
 // 어떤 자료구조, 알고리즘을 사용할 지
 // +@ 알고리즘을 구현해서
 
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class p_프로그래머스_모의고사 {
@@ -21,33 +22,35 @@ class Solution {
         int[] a = new int[10001];
         int[] b = new int[10001];
         int[] c = new int[10001];
+        int[] std3 = {1,2,3,4,5};
         int[] std = {2,1,2,3,2,4,2,5};
         int[] std2 = {3,3,1,1,2,2,4,4,5,5};
         for(int i = 0 ;i<10001;i++){
-            a[i] = i+1;
+            a[i] = std[i%5];
             b[i] = std[i%8];
             c[i] = std2[i%10];
+            System.out.println("a"+a[i]);
+            System.out.println("b"+b[i]);
+            System.out.println("c"+c[i]);
         }
         int acnt= 0;
         int bcnt = 0;
         int ccnt = 0;
         for(int i = 0 ; i<answers.length;i++){
             if(a[i] == answers[i]){
-                System.out.println(a[i]);
-                System.out.println(answers[i]);
-                acnt++;
+                acnt += 1;
             }
-            if(b[i] == answers[i]) {
-                bcnt++;
+            if(b[i] == answers[i]){
+                bcnt += 1;
             }
             if(c[i] == answers[i]){
-                acnt++;
+                ccnt += 1;
             }
         }
 
-        System.out.println(acnt);
-        System.out.println(bcnt);
-        System.out.println(acnt);
+        int res = Math.max(acnt,bcnt) > Math.max(acnt,ccnt) ? 
+
+
         return answer;
     }
 }
