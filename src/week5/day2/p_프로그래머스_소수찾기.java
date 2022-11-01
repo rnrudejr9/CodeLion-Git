@@ -22,7 +22,7 @@ public class p_프로그래머스_소수찾기 {
 
 
         Solution3 solution3 = new Solution3();
-        solution3.solution(20);
+        System.out.println(solution3.solution(10));
     }
 }
 class Solution1{
