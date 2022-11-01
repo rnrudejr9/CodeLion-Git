@@ -13,16 +13,24 @@ package week5.day2;
 
 public class p_프로그래머스_소수찾기 {
     public static void main(String[] args) {
-        Solution1 solution1 = new Solution1();
-        System.out.println(solution1.solution(14));
-
-        Solution2 solution2 = new Solution2();
-        solution2.solution(12);
-        solution2.solution(11);
-
-
-        Solution3 solution3 = new Solution3();
-        System.out.println(solution3.solution(10));
+//        Solution1 solution1 = new Solution1();
+//        System.out.println(solution1.solution(14));
+//
+//        Solution2 solution2 = new Solution2();
+//        solution2.solution(12);
+//        solution2.solution(11);
+//
+//        Solution3 solution3 = new Solution3();
+//        System.out.println(solution3.solution(10));
+//
+//
+        TemplateCallbackPrime tp = new TemplateCallbackPrime();
+        boolean bool = tp.isPrime(15, (a, b)->a*a < b);
+        boolean bool2 = tp.isPrime(15, (a, b)->a < b/2);
+        boolean bool3 = tp.isPrime(15, (a, b)->a < b);
+        System.out.println(bool);
+        System.out.println(bool2);
+        System.out.println(bool3);
     }
 }
 
