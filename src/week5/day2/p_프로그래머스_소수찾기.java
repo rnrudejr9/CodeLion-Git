@@ -14,7 +14,12 @@ package week5.day2;
 public class p_프로그래머스_소수찾기 {
     public static void main(String[] args) {
         Solution1 solution1 = new Solution1();
-        System.out.println(solution1.solution(10));
+        System.out.println(solution1.solution(14));
+
+        Solution2 solution2 = new Solution2();
+        solution2.solution(12);
+        solution2.solution(1);
+
     }
 }
 class Solution1{
@@ -43,19 +48,3 @@ class Solution1{
     }
 }
 
-class Solution3 {
-    public int solution(int n) {
-        int answer = 0;
-        double temp = Math.sqrt(n);
-        int prime = (int) temp;
-        int num = 2;
-        int cnt= 0;
-        while(num != prime){
-            if(n % num == 0){
-                cnt++;
-            }
-            num++;
-        }
-        return answer;
-    }
-}
