@@ -25,29 +25,5 @@ public class p_프로그래머스_소수찾기 {
         System.out.println(solution3.solution(10));
     }
 }
-class Solution1{
-    public int solution(int n){
-        int answer = 0;
-        int prime = 2;
-        int cnt = 0;
-        while(prime != n+1){
-            if(isPrime(prime)){
-                cnt++;
-            }
-            prime++;
-        }
-        return cnt;
-    }
-    public boolean isPrime(int n){
-        int prime = 2;
-        while(n != prime){
-            if(n % prime == 0){
-                return false;
-            }
-            prime++;
-        }
-        return true;
 
-    }
-}
 
