@@ -18,8 +18,11 @@ public class p_프로그래머스_소수찾기 {
 
         Solution2 solution2 = new Solution2();
         solution2.solution(12);
-        solution2.solution(1);
+        solution2.solution(11);
 
+
+        Solution3 solution3 = new Solution3();
+        solution3.solution(20);
     }
 }
 class Solution1{

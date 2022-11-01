@@ -1,5 +1,6 @@
 package week5.day2;
 
+//입력받은 값 n/2 까지 나머지연산 하는 방법
 class Solution2{
     public void solution(int n){
         int answer = 0;
