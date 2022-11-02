@@ -5,8 +5,10 @@ import java.util.Arrays;
 
 public class Prime {
     static ArrayList<Integer> list;
+    static boolean[] arr;
     public static void main(String[] args) {
         list = new ArrayList<>();
+        arr = new boolean[51];
         for(int i = 2;i<51;i++){
             list.add(i);
         }
@@ -17,11 +19,12 @@ public class Prime {
         isRemove(7);
 
         System.out.println(Arrays.toString(list.toArray()));
+        System.out.println(Arrays.toString(arr));
     }
     public static void isRemove(int n){
         for(int i =0;i<list.size();i++){
             if(list.get(i) % n == 0 && list.get(i) > n){
-                list.remove(i);
+                arr[list.get(i)] = true;
             }
         }
     }
