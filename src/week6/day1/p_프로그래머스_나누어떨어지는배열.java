@@ -23,6 +23,11 @@ class Solution3 {
                 pq.add(arr[i]);
             }
         }
+        if(pq.isEmpty()){
+            answer = new int[]{-1};
+            return answer;
+        }
+
         answer = new int[pq.size()];
         int index = 0;
         while(!pq.isEmpty()){
