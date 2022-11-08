@@ -8,8 +8,9 @@ public class Prime {
     static boolean[] arr;
     public static void main(String[] args) {
         list = new ArrayList<>();
-        arr = new boolean[100];
-        for(int i = 2;i<100;i++){
+        int temp = 10_000_000;
+        arr = new boolean[temp];
+        for(int i = 2;i<temp;i++){
             list.add(i);
         }
         arr[0] = true;
