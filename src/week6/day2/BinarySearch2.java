@@ -7,7 +7,7 @@ public class BinarySearch2 {
 
         int startIdx = 0;
         int endIdx = nums.length-1;
-
+        int targetIdx = -1;
         while(startIdx <= endIdx) {
             int midIdx = (startIdx+endIdx)/2;
             int midValue = nums[midIdx];
@@ -19,9 +19,11 @@ public class BinarySearch2 {
             } else {
                 // 같은경우
                 System.out.println(midIdx);
+                targetIdx = midIdx;
                 break;
             }
         }
+        System.out.println(targetIdx);
 
     }
 }
