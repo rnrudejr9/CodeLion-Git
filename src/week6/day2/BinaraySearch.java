@@ -23,11 +23,6 @@ public class BinaraySearch {
         cnt++;
         int temp = (high+low)/2;
 
-        if(target == arr[temp]){
-            System.out.println(temp+1);
-            return;
-        }
-
         if(cnt > arr.length){
             System.out.println(-1);
             return;
@@ -39,6 +34,9 @@ public class BinaraySearch {
         }else if(arr[temp] < target){
             low = temp+1;
             search(high,low,arr,target);
+        }else{
+            System.out.println(temp+1);
+            return;
         }
     }
 }

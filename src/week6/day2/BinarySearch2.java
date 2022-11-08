@@ -6,17 +6,16 @@ public class BinarySearch2 {
         int targetNum = 7;
 
         int startIdx = 0;
-        int endIdx = nums.length - 1;
-        int midIdx = nums.length/2;
-        int midValue = nums[midIdx];
-        System.out.println(midValue);
+        int endIdx = nums.length-1;
 
-        while(true) {
+        while(startIdx <= endIdx) {
+            int midIdx = (startIdx+endIdx)/2;
+            int midValue = nums[midIdx];
             //인덱스 점 옮기기
             if (midValue > targetNum) {
-                startIdx = midIdx + 1;
-            } else if (midValue < targetNum) {
                 endIdx = midIdx - 1;
+            } else if (midValue < targetNum) {
+                startIdx = midIdx + 1;
             } else {
                 // 같은경우
                 System.out.println(midIdx);
