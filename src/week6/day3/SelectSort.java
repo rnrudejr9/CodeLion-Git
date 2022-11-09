@@ -1,6 +1,9 @@
 package week6.day3;
 
 import java.util.Arrays;
+import java.util.function.BiFunction;
+
+//템플릿
 
 public class SelectSort {
     public static void main(String[] args) {
@@ -11,6 +14,8 @@ public class SelectSort {
             System.out.println(i+1 +"회차");
             System.out.println(Arrays.toString(arr));
         }
+
+        System.out.println(Arrays.toString(selectionSort2(arr,(a,b)->a>b)));
     }
 
     public static void SelectionSort(int[] arr, StatementStrategy stmt){
@@ -33,4 +38,20 @@ public class SelectSort {
         }
 
     }
+
+    public static int[] selectionSort2(int[] arr, BiFunction<Integer, Integer, Boolean> stmt) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            int swapIdx = i;
+            for (int j = i; j < arr.length; j++) {
+                if (stmt.apply(arr[swapIdx], arr[j])) swapIdx = j;
+            }
+            int temp = arr[i];
+            arr[i] = arr[swapIdx];
+            arr[swapIdx] = temp;
+            System.out.println(Arrays.toString(arr));
+        }
+        return arr;
+    }
+
+
 }
