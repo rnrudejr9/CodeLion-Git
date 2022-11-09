@@ -7,45 +7,30 @@ public class SelectSort {
         int[] arr= new int[]{2,7,9,4,10,223,111,23,3,39,2,2,7,7};
 
         for(int i = 0; i<arr.length;i++){
-            decendingSort(arr,i);
-            System.out.println(i+1 +"회차");
-            System.out.println(Arrays.toString(arr));
-        }
-        for(int i = 0; i<arr.length;i++){
-            ascendingSort(arr,i);
+            SelectionSort(arr,(a,b) -> a > b);
             System.out.println(i+1 +"회차");
             System.out.println(Arrays.toString(arr));
         }
     }
 
-    public static void decendingSort(int[] arr,int idx){
-        int max = arr[idx];
-        int findIdx = idx;
-        for(int i = idx;i<arr.length;i++){
-            if(max < arr[i]){
-                max = arr[i];
-                findIdx = i;
+    public static void SelectionSort(int[] arr, StatementStrategy stmt){
+        int max;
+        int findIdx;
+        for(int j = 0; j<arr.length;j++) {
+            max = arr[j];
+            findIdx = j;
+            for (int i = j; i < arr.length; i++) {
+                if (stmt.apply(arr[i],max)) {
+                    max = arr[i];
+                    findIdx = i;
+                }
+            }
+            if(max != arr[j]){
+                int temp = arr[j];
+                arr[j] = max;
+                arr[findIdx] = temp;
             }
         }
-        if(max != arr[idx]){
-            int temp = arr[idx];
-            arr[idx] = max;
-            arr[findIdx] = temp;
-        }
-    }
-    public static void ascendingSort(int[] arr,int idx){
-        int max = arr[idx];
-        int findIdx = idx;
-        for(int i = idx;i<arr.length;i++){
-            if(max > arr[i]){
-                max = arr[i];
-                findIdx = i;
-            }
-        }
-        if(max != arr[idx]){
-            int temp = arr[idx];
-            arr[idx] = max;
-            arr[findIdx] = temp;
-        }
+
     }
 }
