@@ -14,20 +14,20 @@ public class SelectSort {
     }
 
     public static void SelectionSort(int[] arr, StatementStrategy stmt){
-        int max;
+        int value;
         int findIdx;
         for(int j = 0; j<arr.length;j++) {
-            max = arr[j];
+            value = arr[j];
             findIdx = j;
             for (int i = j; i < arr.length; i++) {
-                if (stmt.apply(arr[i],max)) {
-                    max = arr[i];
+                if (stmt.apply(arr[i],value)) {
+                    value = arr[i];
                     findIdx = i;
                 }
             }
-            if(max != arr[j]){
+            if(value != arr[j]){
                 int temp = arr[j];
-                arr[j] = max;
+                arr[j] = value;
                 arr[findIdx] = temp;
             }
         }
