@@ -1,4 +1,4 @@
-package week6.day3;
+package week6.day4.day3;
 
 import java.util.Arrays;
 import java.util.function.BiFunction;

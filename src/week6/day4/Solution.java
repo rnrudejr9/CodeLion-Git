@@ -7,10 +7,9 @@ public class Solution {
         int[] answer = {};
         Stack<Integer> st = new Stack<>();
         int index = 0;
-        for(int i =0;i<arr.length-1;i++){
-            if(st.isEmpty()){
-                st.push(arr[i]);
-            }else if(st.peek() != arr[i]) {
+        st.push(arr[0]);
+        for(int i =1;i<arr.length;i++){
+            if(st.peek() != arr[i]) {
                 st.push(arr[i]);
             }
         }
