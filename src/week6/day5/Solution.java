@@ -32,13 +32,11 @@ public class Solution {
         return s;
     }
     public String[] solution(int n, int[] arr1, int[] arr2) throws IOException {
-        String[] answer = {};
+        String[] answer = new String[n];
 
         for(int i =0;i<n;i++){
             int a1 = arr1[i];
             int b1 = arr2[i];
-            DextoBin(a1);
-            DextoBin(b1);
 
             String s =Integer.toBinaryString(arr1[i]);
             String s2 = Integer.toBinaryString(arr2[i]);
@@ -46,20 +44,21 @@ public class Solution {
             s = isSmall(s,n);
             s2 = isSmall(s2,n);
 
-            String[] temp = new String[n];
+            String temp = new String();
             for(int j=0;j<s.length();j++){
                 char ca = s.charAt(j);
                 char cb = s2.charAt(j);
-                temp[j] = "";
                 if(ca == '0' && cb == '0'){
-                    temp[j] += '0';
+                    temp += ' ';
                 }else if(ca == '1' || cb == '1') {
-                    temp[j] += '#';
+                    temp += '#';
                 }
 
             }
-            System.out.println(Arrays.toString(temp));
+          answer[i] = temp;
         }
+
+        System.out.println(Arrays.toString(answer));
 
 
         return answer;
