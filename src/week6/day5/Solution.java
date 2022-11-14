@@ -46,17 +46,19 @@ public class Solution {
             s2 = isSmall(s2,n);
 
             String temp = new String();
-//            for(int j=0;j<s.length();j++){
-//                char ca = s.charAt(j);
-//                char cb = s2.charAt(j);
-//                if(ca == '0' && cb == '0'){
-//                    temp += ' ';
-//                }else if(ca == '1' || cb == '1') {
-//                    temp += '#';
-//                }
-//
-//            }
+            for(int j=0;j<s.length();j++){
+                char ca = s.charAt(j);
+                char cb = s2.charAt(j);
+                if(ca == '0' && cb == '0'){
+                    temp += ' ';
+                }else if(ca == '1' || cb == '1') {
+                    temp += '#';
+                }
+
+            }
           answer[i] = Integer.toBinaryString(arr1[i] | arr2[i]).replace("1","#").replace("0"," ");
+            System.out.println(answer[i]);
+          // 00001 | 00001 => arr1[i] | arr2[i] =>  --(relplace)--> # --(repeat)--> " "" "" "" "# 으로 변경
           answer[i] = " ".repeat(n - answer[i].length()) + answer[i];
         }
 
