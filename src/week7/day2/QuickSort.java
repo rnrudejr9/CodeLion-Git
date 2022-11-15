@@ -5,14 +5,15 @@ import java.util.*;
 
 // 배열의 반을 기준점으로 삼는다. size/2 인덱스를 피봇으로
 public class QuickSort {
-    static Deque<Integer> deque;
-    public QuickSort() {
-        deque = new LinkedList<>();
+    public List<Integer> sort(List<Integer> arr){
+
     }
-    public void quickSort(Integer[] arr){
-        int pivot = arr[arr.length/2];
-        ArrayList<Integer> small = new ArrayList<>();
-        ArrayList<Integer> big = new ArrayList<>();
+    public List<Integer> quickSort(List<Integer> arr){
+        // 기준값을 뽑는 로직
+        int pivot = arr.get(arr.size()/2);
+        List<Integer> small = new ArrayList<>();
+        List<Integer> big = new ArrayList<>();
+        // 기준값  기준 나누는 로직
         for(int x : arr){
             if(pivot < x){
                 big.add(x);
@@ -20,11 +21,7 @@ public class QuickSort {
                 small.add(x);
             }
         }
-        for(int x : small){
-            System.out.println(x);
-        }
-        for(int x : big){
-            System.out.println(x);
-        }
+
+        return sort(small) + pivot +sort(big);
     }
 }
