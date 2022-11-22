@@ -11,14 +11,12 @@ public class ListSum {
         list.add(2);
         list.add(5);
         list.add(7);
-        System.out.println(listSum(list,0));
+        System.out.println(listSum(list));
     }
-    public static int listSum(List<Integer> list,int sum){
+    public static int listSum(List<Integer> list){
         if(list.isEmpty()){
-            return sum;
+            return 0;
         }
-        sum += list.get(list.size()-1);
-        list.remove(list.size()-1);
-        return listSum(list,sum);
+        return list.remove(list.size()-1) + listSum(list);
     }
 }
