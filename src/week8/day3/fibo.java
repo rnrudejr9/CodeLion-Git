@@ -22,7 +22,7 @@ public class fibo {
         if(n == 1){
             return arr[n] = 1;
         } if(n==2){
-            return arr[n] = 2;
+            return arr[n] = 1;
         }
         return arr[n] = fibonacci(n-1) + fibonacci(n-2);
     }
