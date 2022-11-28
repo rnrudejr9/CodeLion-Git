@@ -26,10 +26,9 @@ public class 경우의수 {
         }
 
         if(!visited[n]){
-            visited[n] = true;
-            printChar[index] = ch[n];
-            index++;
             for(int i = 0;i<ch.length;i++){
+                printChar[index] = ch[i];
+                index++;
                 solution(i,index);
                 index--;
             }
