@@ -8,7 +8,7 @@ public class 경우의수 {
         ch = new char[26];
         visited = new boolean[26];
 
-        int size = 2;
+        int size = 3;
         printChar = new char[size];
         for(int i =0;i<26;i++){
             ch[i] = (char)(i+65);
